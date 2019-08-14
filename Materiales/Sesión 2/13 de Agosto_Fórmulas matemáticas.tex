@@ -1,0 +1,104 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}%Acentuación 
+\usepackage[spanish]{babel}%Idioma
+\usepackage{lipsum}%Generación de texto aleatorio
+%Paquetes matemáticos
+\usepackage{amsmath,amssymb,amsthm}%Para operadores
+\usepackage{hyperref} % Referencias dinámicas
+\usepackage{physics}
+
+%Nuevos operadores
+\DeclareMathOperator*{\seno}{seno}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\producin}[2]{\langle #1, #2 \rangle}
+\newcommand{\TF}[1]{\int_{\R^+}e^{its}#1dx} 
+%\newcommand{\abs}[1]{| #1|}
+
+
+\title{Mi primer  documento en \LaTeXe}
+\author{Víctor Hugo Vázquez Montoya}
+\date{\small{\today}}
+
+ \begin{document}
+\[\lim_{x\to x_0}f(x)=f(x_{0})\]
+\[\int_{\Omega}f(x)dx\]
+\[\min_{x\in I}f(x)\]
+\[ \min f(x) \forall x \in e \]
+\[\max_{x\in I}g(x)\]
+\[\min_{u\in A}\int_{a}^{b}F(u)dx\]
+
+
+\[ \lim_{(x,y) \to (0,0)} \frac{x^2+y^2}{e^{x+y}}\]
+
+Sea $T: V \to W$, entonces el núcleo se denota como
+
+\[ \ker T \]
+
+\[ \seno_{x} (x) \]
+
+\[ \boxed{\ker T} \]
+
+\[ \mathbb{R} , \mathbb{C}, \mathcal{O} , \mathbf{I} \mathcal{J}\]
+
+\[ \leadsto \]
+
+\[ u \mapsto \Delta (u) \]
+
+\begin{equation} \label{osito}
+    f(x) = \left[
+    \begin{array}{cc}
+          1 &  x \leq 0\\
+         0  &  x \geq -1 \\
+         \infty & \text{ p.c.o.c. }
+    \end{array}\right]
+\end{equation}
+
+Sea la función $\eqref{osito}$ es muy bonita para todo valor $x \in \R$ denotamos el pi entre dos vectores $\Vec{x}, \Vec{y}$ como 
+
+\[ \producin{\Vec{x}}{\Vec{y}} \]
+
+La transformada de Laplace mapea funciones de dominio tiempo a frecuencia y se denota por $\eqref{eq:TF}$.
+
+\begin{equation}\label{eq:TF}
+    \mathcal{F}(f)(s)=\TF{f(t)}
+\end{equation}
+
+
+
+\section{Límites}
+Demostrar por $\epsilon$ y $\delta$ que 
+\[ \lim_{x \to 1} x =1 \]
+
+\begin{proof}
+Pd. $\forall \epsilon >0, \exists \delta>0  $ tal que si $\abs{x-1}<\delta$ entonces $\abs{x-1}<\epsilon$.\\ 
+En efecto, sea $\epsilon >0$
+\begin{equation}
+    \abs{x-1}<\delta \quad \text{ tomando } \quad \delta=\epsilon.  
+\end{equation}
+
+\end{proof}
+
+\begin{align*}
+    x+3x+1&=4\\
+    4x +1 &= 4\\
+    4x &= 3\\
+    x &= \frac{3}{4}
+\end{align*}
+
+\begin{align}
+\label{eq:Lap} \tag{$\rho$}
+\begin{split}
+    H^{1}(\Omega) &\to H_{0}^{1}(\Omega) \\
+     u &\mapsto \Delta (u)
+\end{split}
+\end{align}
+
+El operador de Laplace mapea funciones entre los espacios de Sobolev tales y se define como $\eqref{eq:Lap}$.
+
+\[ \norm{\frac{f^{x+y+z}}{e^{x+y}}} \]
+\[  \grad u, \div u, \curl u \]
+\[ \pdv{f(x,y)}{x} \quad \pdv[2]{f}{x} \quad \pdv{f}{x}{y} \]
+\[ \dv{f}{x} \]
+
+
+\end{document}
